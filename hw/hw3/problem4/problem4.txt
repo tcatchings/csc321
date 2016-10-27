@@ -1,0 +1,51 @@
+#problem4
+
+#first snapshot (pre-snapshot)
+
+rosalind:problem4 tcatchings$ netstat -an -p tcp
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  192.168.181.18.60657   17.249.60.10.5223      ESTABLISHED
+tcp4       0      0  192.168.181.18.59422   193.235.206.50.4070    ESTABLISHED
+tcp4       0      0  *.57621                *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4371         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4381         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4380         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4370         *.*                    LISTEN
+tcp4       0      0  *.22                   *.*                    LISTEN
+tcp6       0      0  *.22                   *.*                    LISTEN
+
+#second snapshot (during)
+
+rosalind:problem4 tcatchings$ netstat -an -p tcp
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  *.5556                 *.*                    LISTEN
+tcp4       0      0  192.168.181.18.62159   192.168.55.210.5556    SYN_SENT
+tcp4       0      0  *.8100                 *.*                    LISTEN
+tcp4       0      0  192.168.181.18.62154   216.58.218.110.443     ESTABLISHED
+tcp4       0      0  192.168.181.18.62153   216.58.218.142.443     ESTABLISHED
+tcp4       0      0  192.168.181.18.60657   17.249.60.10.5223      ESTABLISHED
+tcp4       0      0  192.168.181.18.59422   193.235.206.50.4070    ESTABLISHED
+tcp4       0      0  *.57621                *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4371         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4381         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4380         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4370         *.*                    LISTEN
+tcp4       0      0  *.22                   *.*                    LISTEN
+tcp6       0      0  *.22                   *.*                    LISTEN
+
+#third snapshot (after)
+
+rosalind:problem4 tcatchings$ netstat -an -p tcp
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  192.168.181.18.60657   17.249.60.10.5223      ESTABLISHED
+tcp4       0      0  192.168.181.18.59422   193.235.206.50.4070    ESTABLISHED
+tcp4       0      0  *.57621                *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4371         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4381         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4380         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4370         *.*                    LISTEN
+tcp4       0      0  *.22                   *.*                    LISTEN
+tcp6       0      0  *.22                   *.*                    LISTEN

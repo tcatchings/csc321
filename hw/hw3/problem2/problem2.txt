@@ -1,0 +1,59 @@
+#problem2
+
+#first snapshot (pre-snapshot)
+
+rosalind:hw3 tcatchings$ netstat -an -p tcp
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  *.57621                *.*                    LISTEN
+tcp4       0      0  192.168.181.18.61704   23.92.108.227.4070     ESTABLISHED
+tcp4       0      0  127.0.0.1.4371         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4381         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4380         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4370         *.*                    LISTEN
+tcp4       0      0  192.168.181.18.61537   17.249.220.28.5223     ESTABLISHED
+tcp4       0      0  *.22                   *.*                    LISTEN
+tcp6       0      0  *.22                   *.*                    LISTEN
+
+#second snapshot (during)
+
+rosalind:hw3 tcatchings$ netstat -an -p tcp
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  127.0.0.1.5559         127.0.0.1.59366        ESTABLISHED
+tcp4       0      0  127.0.0.1.59366        127.0.0.1.5559         ESTABLISHED
+tcp4       0      0  127.0.0.1.5560         127.0.0.1.59360        ESTABLISHED
+tcp4       0      0  127.0.0.1.59360        127.0.0.1.5560         ESTABLISHED
+tcp4       0      0  *.5560                 *.*                    LISTEN
+tcp4       0      0  *.5559                 *.*                    LISTEN
+tcp4       0      0  *.57621                *.*                    LISTEN
+tcp4       0      0  192.168.181.18.61704   23.92.108.227.4070     ESTABLISHED
+tcp4       0      0  127.0.0.1.4371         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4381         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4380         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4370         *.*                    LISTEN
+tcp4       0      0  192.168.181.18.61537   17.249.220.28.5223     ESTABLISHED
+tcp4       0      0  *.22                   *.*                    LISTEN
+tcp6       0      0  *.22                   *.*                    LISTEN
+
+#i changed the for loop in the client to a while loop, and holy moly, there was
+#a lot of stuff on my screen at once, it was quite scary. however, it didnt seem
+#blow up the network as much as i expected it to.
+
+#third snapshot (after)
+
+rosalind:hw3 tcatchings$ netstat -an -p tcp
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  *.57621                *.*                    LISTEN
+tcp4       0      0  192.168.181.18.61704   23.92.108.227.4070     ESTABLISHED
+tcp4       0      0  127.0.0.1.4371         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4381         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4380         *.*                    LISTEN
+tcp4       0      0  127.0.0.1.4370         *.*                    LISTEN
+tcp4       0      0  192.168.181.18.61537   17.249.220.28.5223     ESTABLISHED
+tcp4       0      0  *.22                   *.*                    LISTEN
+tcp6       0      0  *.22                   *.*                    LISTEN
+
+#it seems to be the same as when i took my first snapshot. didnt notice any
+#ghosts or anything. hmmm.
